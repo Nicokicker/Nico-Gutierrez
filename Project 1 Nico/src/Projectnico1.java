@@ -16,7 +16,7 @@ public class Projectnico1 {
 		System.out.println("I'm from Mexico");
 		System.out.println("I've been playing football since 3 years ago");
 		System.out.println("It is gonna be my first game");
-		System.out.println("I'm really happy");
+		System.out.println("I'm ready");
 
 	}
 
