@@ -27,7 +27,7 @@ public class Program5 {
 		  guests=keyboard.nextInt();
 		  table(guests);
 
-
+		  
         do
         {
             mainMenu();
