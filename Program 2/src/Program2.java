@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Program2 {
 
 
-	private static Scanner in;
+	public static Scanner in;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
