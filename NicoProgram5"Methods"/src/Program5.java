@@ -17,11 +17,17 @@ public class Program5 {
         double changeAmount = 0.00;
         double total = 0.00;
         double price = 0.00;
+        int tiempo = 0; 
         double TotAPagar = 0;
-        Random randomNumber = new Random();
-   		int sushitime = randomNumber.nextInt(10) + 1;
+   		int guests = 0;
         
-        System.out.println("Hi, welcome to Nico's Sushi, would you like to try any of our delicious food? ");
+        System.out.println("Hi, welcome to Nico's Sushi, we hope you enjoy!! ");
+        System.out.println(" ");
+        System.out.println(" How many people are attending the restaurant ? ");
+		  guests=keyboard.nextInt();
+		  System.out.println(table(guests));
+
+
         do
         {
             mainMenu();
@@ -29,42 +35,49 @@ public class Program5 {
             switch (menuChoice)
             {
                 case 1:
-                    System.out.println("Tuna Cake is $5, how much is your total right now ? ");
+                	 System.out.println("Tuna cake price ");
+                     price = keyboard.nextDouble();
+                    System.out.println("Tuna Cake is $5, how much are you going to pay? ");
                     total = keyboard.nextDouble();
-                    System.out.println("Tuna cake price ");
-                    price = keyboard.nextDouble();
-                    changeAmount = change (total, price);
-                    System.out.println(" You're Tuna Cake is going to take " + sushitime + " minutes, please wait");
+                    changeAmount =  change (total, price);
+                    System.out.println("You're change is : $" + changeAmount);
+                    tiempo = time ();
+                    System.out.println(" You're Tuna Cake is going to take " + tiempo + " minutes, please wait");
                     System.out.println("=========");
                     System.out.println(" Would you like to add any other delicious meal? If done press 4 !!");
                     System.out.println("");
                     break;
                 case 2:
-                    System.out.println("Dragon Roll is $2, how much is your total right now ? ");
-                    total = keyboard.nextDouble();
-                    System.out.println("Dragon Roll price ");
+                	System.out.println("Dragon Roll price ");
                     price = keyboard.nextDouble();
+                    System.out.println("Dragon Roll is $12, how much are you going to pay? ");
+                    total = keyboard.nextDouble();
                     changeAmount = change (total, price);
-                    System.out.println(" You're Dragon Roll is going to take " + sushitime + " minutes, please wait");
+                    System.out.println(" your change is: $" + changeAmount); 
+                    tiempo = time ();
+                    System.out.println(" You're Dragon Roll is going to take " + tiempo + " minutes, please wait");
                     System.out.println("=========");
                     System.out.println(" Would you like to add any other delicious meal? If done press 4 !!");
                     System.out.println("");
                     break;
                 case 3:
-                    System.out.println(" Toro Nigiri is $10, how much is your total right now ?  ");
-                    total = keyboard.nextDouble();
                     System.out.println("Toro Nigiri price ");
                     price = keyboard.nextDouble();
+                    System.out.println(" Toro Nigiri is $10, how much are you going to pay ?  ");
+                    total = keyboard.nextDouble();
                     changeAmount = change (total, price);
-                    System.out.println(" You're Toro Nigiri is going to take " + sushitime + " minutes, please wait");
+                    System.out.println(" your change is: $" + changeAmount);
+                    tiempo = time ();
+                    System.out.println(" You're Toro Nigiri is going to take " + tiempo + " minutes, please wait");
                     System.out.println("=========");
                     System.out.println(" Would you like to add any other delicious meal? If done press 4 !!");
                     System.out.println("");
                     break;
                 case 4: 
-                    System.out.println(" You're total is " + total + " How much are you paying? ");
+                    System.out.println(" You're total check is " + price + " How much are you paying? ");
                     TotAPagar=keyboard.nextDouble();
                     changeAmount = change (TotAPagar, price);
+                    System.out.println("You're change is : $" + changeAmount);
                     System.out.println(" If done, please press option 5!! ");
                     System.out.println("=========");
                     break;
@@ -87,7 +100,7 @@ public class Program5 {
                                System.out.println("Main Menu");
                                System.out.println("=========");
                                System.out.println("1.) Tuna Cake ($5) ");
-                               System.out.println("2.) Dragon Roll ($2) ");
+                               System.out.println("2.) Dragon Roll ($12) ");
                                System.out.println("3.) Toro Nigiri ($10 )");
                                System.out.println("4.) If you're done, press here to recieve check ");
                                System.out.println("5.) Exit");
@@ -99,7 +112,7 @@ public class Program5 {
                        {
                                double check = -1;
                                if (amount>= price)
-                                       check=  (amount- price);
+                                       check=  amount - price;
                                return check ;
                        }
 
@@ -109,8 +122,23 @@ public class Program5 {
 
                    		Random randomNumber = new Random();
                    		
-                   		int time = randomNumber.nextInt(444) + 1;
+                   		int time = randomNumber.nextInt(15) + 1;
                                return  time;
+                       }
+                    // Method to perform a table (receives information)
+                       public static void table (int l )
+                       {
+                    	  if (l<3) 
+                    		  System.out.println("You've been assigned a small table");
+                    	  else 
+                    		  if (l>3 && l<6) 
+                        		  System.out.println("You've been assigned a mediuem table");
+                    		  else
+                    			  if (l>6)
+                            		  System.out.println("You've been assigned a big table");
+                    			  
+                    	  
+                    	   
                        }
 
        }
