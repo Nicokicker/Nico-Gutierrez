@@ -25,7 +25,7 @@ public class Program5 {
         System.out.println(" ");
         System.out.println(" How many people are attending the restaurant ? ");
 		  guests=keyboard.nextInt();
-		  System.out.println(table(guests));
+		  table(guests);
 
 
         do
