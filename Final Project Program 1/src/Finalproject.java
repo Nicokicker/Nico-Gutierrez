@@ -1,3 +1,9 @@
+//Project:      Final Project Program 1
+//Author:       Nicolas Gutierrez
+//GitHub:        Nicokicker
+//Date:         December 10, 2019
+
+
 import java.util.Random;
 import java.util.Scanner;
 import java.io.*;
